@@ -1,0 +1,311 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', Arial, sans-serif; /* Improved font stack */
+}
+
+/* Root Variables */
+:root {
+    --text-color: #000000;
+    --main-color: #83b783;
+    --accent-color: #ff9900;
+}
+
+/* Section Spacing */
+section {
+    padding: 50px 10%;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 50px; /* Reduced padding for better fit */
+    background: #ededed;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    gap: 15px; /* Add spacing between nav links */
+}
+
+.navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Hide menu icon by default */
+}
+
+/* Home Section */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+.home-text h1 {
+    font-size: 3.5rem; /* Increased font size for emphasis */
+    line-height: 1.2; /* Adjusted line height for tighter spacing */
+    font-weight: bold; /* Optional: Makes the text bolder for emphasis */
+}
+
+.home-text p {
+    font-size: 1rem; /* Slightly larger font size for better readability */
+    margin: 0.5rem 0 2rem; /* Adjusted margins for improved spacing */
+    line-height: 1.6; /* Optional: Adds better text spacing for readability */
+}
+
+
+.home-text span {
+    color: var(--main-color);
+}
+
+.btn {
+    padding: 10px 20px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #8fc58f;
+}
+
+/* Shop Section */
+.shop-container,
+.new-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1rem;
+   margin-top: 2rem; 
+}
+
+.box {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    text-align: center;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.box-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.title-price {
+    padding: 10px;
+}
+
+.title-price h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.stars {
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+.price {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+}
+
+.box i.bx-cart {
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.box i.bx-cart:hover {
+    color: var(--main-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 15px 30px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .home-text h1 {
+        font-size: 2rem;
+    }
+}
+.new-container .box{
+    border-radius: 4px;
+}
+
+
+
+
+.stars i {
+    color: #f39c12; /* Gold color for the stars */
+    margin-right: 2px;
+}
+/* New Arrival Container */
+.new-container {
+    display: grid; /* Grid layout for flexible alignment */
+    grid-template-columns: repeat(3, 1fr); /* 3 items in a row */
+    gap: 2rem; /* Space between boxes */
+    margin-top: 2rem; /* Consistent spacing from previous section */
+    justify-content: center; /* Center-align items in the container */
+    padding: 0 10px; /* Add horizontal padding */
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 1rem;
+    
+}
+.about-img img{
+    width: 80%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+/* General styling for the about-content section */
+.about-content {
+    text-align: left; /* Align text to the left */
+    max-width: 700px; /* Limit content width for better readability */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 20px; /* Padding for responsiveness */
+}
+
+/* Styling for the About Us heading (h3) */
+.about-content h3 {
+    font-size: 1.4rem; /* Size for the "About Us" title */
+    font-weight: 500; /* Semi-bold font weight */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    color: var(--main-color); /* Primary color */
+    margin-bottom: 15px; /* Spacing below the heading */
+}
+
+/* Styling for the main heading (h2) */
+.about-content h2 {
+    font-size: 2.5rem; /* Larger size for the main heading */
+    line-height: 1.3; /* Line height for readability */
+    margin: 0 0 20px 0; /* Margin bottom to create space between paragraphs */
+    color: #333; /* Dark text color */
+}
+
+/* Styling for the paragraphs */
+.about-content p {
+    font-size: 1rem; /* Default text size */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Slightly lighter text color */
+    margin-bottom: 1.5rem; /* Spacing between paragraphs */
+}
+
+/* Styling for the "Learn More" button */
+.about-content .btn {
+    display: inline-block; /* Display as inline-block for button behavior */
+    padding: 12px 30px; /* Button padding */
+    background-color: var(--main-color); /* Use primary color */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: 500; /* Semi-bold font weight */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 1rem; /* Button font size */
+    margin-top: 20px; /* Space between the last paragraph and button */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for the button */
+.about-content .btn:hover {
+    background-color: darken(var(--main-color), 10%); /* Darken on hover */
+}
+
+/* Responsive Design for smaller screens (Mobile/Tablets) */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 15px; /* Adjust padding on smaller screens */
+        text-align: center; /* Center-align text on small screens */
+    }
+
+    .about-content h2 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    .about-content p {
+        font-size: 0.95rem; /* Slightly smaller text for better readability */
+        margin-bottom: 1.2rem; /* Reduce bottom margin on small screens */
+    }
+
+    .about-content .btn {
+        padding: 10px 25px; /* Adjust button padding */
+    }
+}
+.brands-container{
+    display: grid;
+grid-template-columns: repeat(auto-fit,minmax(100px,auto));
+align-items: center;
+justify-content: space-between;
+gap: 1rem;
+margin-top: 2rem;
+}
+.brands-container img{
+    width: 100px;
+    filter: grayscale(1);
+    
+}
+.brands-container img:hover{
+    width: 100px;
+    filter: grayscale(0);
+    
+}
